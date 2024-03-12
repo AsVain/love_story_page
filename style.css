@@ -1,0 +1,175 @@
+/*zresetowanie wszystich marginesów i paddingów - ustawienie wartości domyślnej na zero.
+
+wybieramy selektor (podstawowy element, który nas kieruje na element w html)
+gwiazdka - to każdy element -> body, div, header, nav, a, img wszystko
+
+* {margin: 0 0 0 0;}
+0 0 0 0 -> gora, prawo, dol, lewo
+
+
+ustawienie domyślnej czcionki - font family, czyli czcionke, ktora uzywamy na stronie
+
+font-family: Roboto, Arial, Helvetica, sans-serif; (arial, gdyby roboto się nie wgrało
+
+box-sizing -> domyslnie ona ma wartosc CONTENT-BOX
+
+content box - width 600px, padding 230px, border-right 20px = calosc 850px 
+
+border box - width 350px, padding 230px, border-right 20px = calosc 600 px
+
+borderbox jest lepszy
+
+
+
+wysrodkowanie naszej tresci na stronie = odwolanie sie do id wrapper, # mówi znajdź id i jakie id. Okręlmy jego max szerokość na 1000px
+
+margin: 0 auto 0 auto; to inaczej margin: 0 auto;
+
+header img - odwolanie do zdj umieszczonego w headerze, a ze jest tam tylko jedno, to mozna tak zapisac
+
+odwolywanie:
+- jak klasa, to kropki
+- jak obiekt, to po prostu obiekt
+
+a.meu:hover - okreslamy, jak ma sie zachowac dany element po najechaniu na niego
+
+media querries na koniec, bo jest kaskadowość
+
+transition: all; -> stosowane do płynncyh przejść
+
+przejscie do nowej stony po kliknieciu - tworzymy nowy plik.
+*/
+
+* {
+    margin: 0; 
+    padding: 0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ddb;
+}
+
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+header img{
+    width: 100%; 
+    display: block;
+}
+
+.home.main p{
+    text-align: justify;
+    line-height: 25px;
+    font-size: 18px;
+    padding: 15px 0;
+}
+
+nav{
+    overflow: hidden;
+}
+
+nav a{
+    display: block;
+    width: 25%;
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: darkcyan;
+    padding: 15px 30px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+/* poki co chowamy
+nav{
+    background-color: darkcyan;
+    color: aliceblue;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+a.menu {
+    display: inline-block;
+    width: 25%;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+*/
+
+a.menu:hover {
+    background-color: crimson;
+    cursor: pointer;
+}
+
+a.active {
+    background-attachment: crimson;
+    cursor: pointer;
+}
+
+article{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+article h1{
+    text-align: center;
+    font-size: 30px;
+    margin: 0 10% 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid crimson;
+}
+
+article h2{
+    color: pink;
+    text-align: center;
+    font-size: 100px;
+    margin: 0 10% 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid crimson;
+}
+
+img.left{
+    float: left;
+    margin: 0px 10px 10px 0;
+    width: 25%;
+    border-radius: 25% 15%;
+}
+
+article p{
+    text-align: justify;
+    line-height: 25px;
+    font-size: 18px;
+    padding: 15px 0;
+}
+
+iframe{
+    width: 100%;
+}
+
+footer{
+    height: 40px;
+    background-color: darkcyan;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+@media (max-width:600px){
+    nav a{
+        width: 100%;
+        padding: 10px 30px;
+    }
+    article p{
+        font-size: 15px;
+    }
+}

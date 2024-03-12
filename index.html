@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <!--kodowanie znaków, możemy używać polskich znaków-->
+        <meta charset="UTF-8">
+        <!--sposób wyświetlania na urządzeniach mobilnych-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--tytuł strony m.in. w wynikach wyszukiwania-->
+        <title>Fit Kalkulator</title>
+        <!--importujemy czcionkę, żeby jej użyć, tu wchodzimy w google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!--ikonka strony (fav icon) Healthy Eating icon by Icons8-->
+        <link rel="shortcut icon" href="icons8-healthy-eating-96 (2).png" type="image/x-icon">
+        <!-- odnośnik do style.css, żeby wczytywały się style z tamtego pliku -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <img class="banner" src="swieze-owoce-i-warzywa-na-szarym-tle-koncepcja-zdrowego-odzywiania-plaska-przestrzen-do-kopiowania_1049953-2020.jpg" alt="baner - header"/>
+            </header>
+
+            <nav>
+                <a class="menu active" href="index.html">O mnie</a>
+                <a class="menu" href="news.html">Aktualności</a>
+                <a class="menu" href="inspiration.html">Inspiracje</a>
+                <a class="menu" href="contact.html">Kontakt</a>
+            </nav>
+
+            <section>
+                <article>
+                    <h2>Natusia jest SUPER ~ kocham, Przemuś</h2>
+                    <h1>Super dieta i kalkulator</h1>
+                    <p><img class="left" src="dziewczyna-ze-skrzyzowanymi-rekami-na-silowni_1153-948.jpg" alt="kobieta" />
+                        Kalkulator BMI (Body Mass Index) daje każdemu możliwość szybkiego i wygodego obliczenia własnego wskaźnika masy ciała. BMI obliczamy dzieląc masę ciała (w kilogramach) przez wzrost do kwadratu (w metrach). Wskaźnik ten wykorzystywany jest przede wszystkim do oceny ryzyka pojawienia się groźnych chorób: miażdżycy, choroby niedokrwiennej serca, udaru mózgu, czy nawet nowotworów. Większość tych chorób jest związana z otyłością i dlatego kalkulator BMI to tak przydatne narzędzie.
+                    </p> 
+                    <p>
+                        BMI jest jednym z ważnych wskaźniów określających nasz stan fizyczny, ale niestety nie wystarczającym. Bardzo ważnym uzupełnieniem BMI jest wskaźnik ilości tłuszczu brzusznego - zbyt duży może oznaczać niebezpieczną otyłość brzuszną i to nawet przy prawidłowym BMI! Ponadto, paradoksalnie, badania naukowe wskazują, że osoby z lekką nadwagą zwykle są zdrowsze i żyją dłużej od osób z tzw. "prawidłową wagą". Pojawiają się nawet głosy, że ustalony arbitralnie przez WHO próg nadwagi (25) jest zbyt niski.
+                    </p>
+                    <p>
+                        Kalkulator BMI obrazuje przybliżoną zawartość tłuszczu w organiźmie. W przypadku niektórych osób wskaźnik BMI może sugerować błędne wnioski. Osoby aktywne fizycznie, uprawiający sport, mogą posiadać zawyżoną wagę związaną z tkanką mięśniową a nie z ilością tłuszczu w organiźmie. Ponadto nie zaleca się stosowania wskaźnika BMI do oznaczania wagi ciała dla dzieci do ok. 14 roku życia oraz dla kobiet w ciąży.
+                    </p>
+                </article>
+                <iframe width="1000" height="563" src="https://www.youtube.com/embed/5Uo3fi4Gyyw?si=atFVikENfRTQoqDX&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+            <footer>
+                Zrobiłem taką stronkę w godzinę i mając podstawową wiedzę. Co będzie za kilka miesięcy!
+            </footer>
+
+            <section>
+                <div id="calc">
+                    <h2>BMI Calculator - Javascript</h2>
+
+                    <label for="weight">Waga [kg]</label>
+                    <input id="weight" type="numbers"><br/>
+                    <label for="height">Wysokość [cm]</label>
+                    <input id="height" type="numbers"><br/>
+
+                    <button onclick="calculateBmi()">Zatwierdź</button>
+                    <button onclick="reload()">Wyczyść</button>
+
+
+                    <h4 id="heading"></h4>  
+                    <p id="bmi-output"></p>
+                    <p id="message"></p>  
+
+                    <script src="script.js"></script>
+                </div>
+            </section>
+
+        </div>
+
+    </body>
+</html>
